@@ -1,6 +1,11 @@
+/**
+M C K Wijesuriya 
+IT15127556
+Prorata
+ */
 package songs.users;
 
-public class Operator extends User {
+public class Operator extends User implements UserDetails{
 
     private int empNo;
     private String jobTitle;
@@ -8,16 +13,14 @@ public class Operator extends User {
 
     public Operator(User user, int empNo, String jobTitle) {
         super(user);
-        this.user = user;
         this.jobTitle = jobTitle;
         this.empNo = empNo;
     }
 
-    @Override
     public void printDetails() {
-        System.out.println("name : " + user.name);
-        System.out.println("name : " + user.email);
-        System.out.println("name : " + this.empNo);
-        System.out.println("name : " + this.jobTitle);
+        System.out.println("Employee Number : " + this.empNo);
+        System.out.println("Job Title : " + this.jobTitle);
+//        user = new User(user);
+//        user.printUser();
     }
 }

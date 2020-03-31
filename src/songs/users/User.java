@@ -1,6 +1,11 @@
+/**
+M C K Wijesuriya 
+IT15127556
+Prorata
+ */
 package songs.users;
 
-public abstract class User {
+public class User implements UserDetails{
 
     public String name;
     public String email;
@@ -15,5 +20,13 @@ public abstract class User {
         this.email = user.email;
     }
 
-    public abstract void printDetails();
+//    public void printDetails();
+
+   @Override
+   public void printUser() {
+      
+      System.out.println("name        : " + name);
+      System.out.println("email       : " + email);
+      
+   }
 }
